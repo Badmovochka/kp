@@ -2,6 +2,7 @@ import os
 
 from page_test.page.base_page import WebPage
 from page_test.page.elements import WebElement
+from page_test.page.elements import ManyWebElements
 
 
 class MainPage(WebPage):
@@ -55,3 +56,21 @@ class MainPage(WebPage):
     radio_russian = WebElement(xpath='//*[@id = "uiRussian"]')
     radio_russian_text = WebElement(xpath='//*[@class = "tm-input-radio-labeled__label"][text()="Русский"]')
 
+    # radio_buttons = [
+    #     ['uiRussian', '//*[@id="overlays"]/div/div[2]/div/div/form/div[2]/div[2]/p[1]/div/label', "Русский"],
+    #     ['uiEnglish', '//*[@id="overlays"]/div/div[2]/div/div/form/div[2]/div[2]/p[2]/div/label', "English"],
+    #     ['feed', '//*[@id="overlays"]/div/div[2]/div/div/form/div[4]/div[2]/p[1]/div/label', "Classic"],
+    #     ['feed', '//*[@id="overlays"]/div/div[2]/div/div/form/div[4]/div[2]/p[2]/div/label', "Compact"],
+    #     ['colorTheme', '//*[@id="overlays"]/div/div[2]/div/div/form/div[5]/div[2]/p[1]/div/label', "Dark"],
+    #     ['colorTheme', '//*[@id="overlays"]/div/div[2]/div/div/form/div[5]/div[2]/p[2]/div/label', "Light"],
+    #     ['colorTheme', '//*[@id="overlays"]/div/div[2]/div/div/form/div[5]/div[2]/p[3]/div/label', "System"]
+    # ]
+
+    #searchbox
+    btn_search = WebElement(xpath='//*[@class="tm-svg-img tm-header-user-menu__icon tm-header-user-menu__icon_search tm-header-user-menu__icon_dark"]')
+    field_search = WebElement(xpath='//*[@class="tm-search__input tm-input-text-decorated__input"]')
+    btn_submit_search = WebElement(xpath='//*[@class="tm-svg-img tm-svg-icon" and @height = "16"]')
+
+    #search results page
+    articles_feed = WebElement(xpath='//*[@class="tm-articles-list"]')
+    articles = ManyWebElements(xpath='//*[@class="tm-articles-list__item"]')
