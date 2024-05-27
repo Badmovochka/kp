@@ -49,3 +49,9 @@ class MainPage(WebPage):
     btn_footer_4_3 = WebElement(xpath='//*[@class = "tm-footer-menu__list-item"]/a[text()="Нативные проекты"]')
     btn_footer_4_4 = WebElement(xpath='//*[@class = "tm-footer-menu__list-item"]/a[text()="Образовательные программы"]')
     btn_footer_4_5 = WebElement(xpath='//*[@class = "tm-footer-menu__list-item"]/a[text()="Стартапам"]')
+
+    #settings buttons, radios & checkboxes
+    btn_settings = WebElement(xpath='//button[@class = "tm-footer__link"]')
+    radio_russian = WebElement(xpath='//*[@id = "uiRussian"]')
+    radio_russian_text = WebElement(xpath='//*[@class = "tm-input-radio-labeled__label"][text()="Русский"]')
+
