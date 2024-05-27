@@ -13,17 +13,17 @@ def test_headers(web_browser):
     page = MainPage(web_browser)
 
     header_buttons = [
-            (page.btn_headers_1_my_feed, 'Моя лента'),
-            (page.btn_headers_2_all_streams, 'Все потоки'),
-            (page.btn_headers_3_development, 'Разработка'),
-            (page.btn_headers_4_admin, 'Администрирование'),
-            (page.btn_headers_5_design, 'Дизайн'),
-            (page.btn_headers_6_management, 'Менеджмент'),
-            (page.btn_headers_7_marketing, 'Маркетинг'),
-            (page.btn_headers_8_popsci, 'Научпоп')
+            (page.btn_headers_1_my_feed, 'Моя лента', 'https://habr.com/ru/feed/'),
+            (page.btn_headers_2_all_streams, 'Все потоки', 'https://habr.com/ru/articles/'),
+            (page.btn_headers_3_development, 'Разработка', 'https://habr.com/ru/flows/develop/'),
+            (page.btn_headers_4_admin, 'Администрирование', 'https://habr.com/ru/flows/admin/'),
+            (page.btn_headers_5_design, 'Дизайн', 'https://habr.com/ru/flows/design/'),
+            (page.btn_headers_6_management, 'Менеджмент', 'https://habr.com/ru/flows/management/'),
+            (page.btn_headers_7_marketing, 'Маркетинг', 'https://habr.com/ru/flows/marketing/'),
+            (page.btn_headers_8_popsci, 'Научпоп', 'https://habr.com/ru/flows/popsci/')
         ]
 
-    for button, button_text in header_buttons:
+    for button, button_text , button_link in header_buttons:
         with allure.step(f'Проверка видимости элемента "{button_text}"'):
             check.is_true(button.is_visible())
 
@@ -33,6 +33,11 @@ def test_headers(web_browser):
         with allure.step(f'Проверка текста элемента "{button_text}"'):
             btn_text = button.get_text()
             check.equal(btn_text, button_text, f'Тест локатора "{button_text}" не равен ожидаемому результату')
+
+        with allure.step(f'Проверка ссылки элемента {button_text}'):
+            btn_link = button.get_attribute('href')
+            check.equal(btn_link, button_link, f'Ссылка локатора {button_text} не равна ожидаемой')
+
 
 #Тесты футера разбиты на разделы, т.к. проверка футера целиком выполняется очень долго
 @allure.story('Проверка главной страницы')
@@ -141,7 +146,7 @@ def test_footer_services(web_browser):
         ]
 
     page.scroll_down()
-    time.sleep(2)
+    time.sleep(1)
 
     for button, button_text in footer_buttons:
         with allure.step(f'Проверка видимости элемента "{button_text}"'):
@@ -153,3 +158,65 @@ def test_footer_services(web_browser):
         with allure.step(f'Проверка текста элемента "{button_text}"'):
             btn_text = button.get_text()
             check.equal(btn_text, button_text, f'Тест локатора "{button_text}" не равен ожидаемому результату')
+
+@allure.story('Проверка главной страницы')
+@allure.feature('Проверка поиска')
+def test_search(web_browser):
+    """Этот тест проверяет строку поиска"""
+
+    page = MainPage(web_browser)
+
+    page.btn_search.click()
+    time.sleep(1)
+
+    searched_value = 'Тестирование'
+
+    page.field_search.send_keys(searched_value)
+
+    page.btn_submit_search.click()
+    time.sleep(1)
+
+    with allure.step(f'Проверка, что поиск выдал ленту результатов'):
+        check.is_true(page.articles_feed.is_visible())
+
+    with allure.step(f'Проверка, что результатов поиска больше одного'):
+        check.greater_equal(page.articles.count(), 1)
+        print(page.articles.count())
+
+        for article in page.articles:
+            with allure.step(f'Проверка, что найденные статьи содержат искомое слово "{searched_value}"'):
+                check.is_true(article.text.find(searched_value))
+
+# @allure.story('Проверка главной страницы')
+# @allure.feature('Проверка меню "Настройки языка" (радио-баттоны и чекбоксы')
+# def test_settings(web_browser):
+#     """Этот тест проверяет радио-баттоны и чекбоксы в настройках"""
+#
+#     page = MainPage(web_browser)
+#
+#     page.scroll_down()
+#     time.sleep(1)
+#
+#     page.btn_settings.click()
+#     time.sleep(1)
+#
+#     radio_buttons = [
+#         (page.radio_russian, page.radio_russian_text, "Русский")
+#     ]
+#
+#     for radio, radio_text, required_radio_text in radio_buttons:
+#         radio.scroll_to_element()
+#
+#         with allure.step(f'Проверка элемента {required_radio_text} на отображение'):
+#             check.is_true(radio.is_visible(), f'Radio button {required_radio_text} is not displayed')
+#
+#         with allure.step(f'Проверка текста элемента {required_radio_text} на отображение'):
+#             check.is_true(radio_text.is_visible(), f'Radio button text {required_radio_text} is not displayed')
+#
+#         with allure.step(f'Проверка элемента {required_radio_text} на кликабельность'):
+#             check.is_true(radio.is_clickable(), f'Radio button {required_radio_text} is not clickable')
+#
+#         # with allure.step(f'Проверка, что кнопка {required_radio_text} выбрана'):
+#         #     radio.click()
+#         #     time.sleep(1)
+#         #     check.is_true(radio.is_selected(), f'Radio button {required_radio_text} is not selected')
