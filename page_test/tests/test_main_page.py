@@ -181,11 +181,12 @@ def test_search(web_browser):
 
     with allure.step(f'Проверка, что результатов поиска больше одного'):
         check.greater_equal(page.articles.count(), 1)
-        print(page.articles.count())
 
-        for article in page.articles:
-            with allure.step(f'Проверка, что найденные статьи содержат искомое слово "{searched_value}"'):
-                check.is_true(article.text.find(searched_value))
+    count = 1
+    for article in page.articles:
+        with allure.step(f'Проверка, что статья № {count} содержит искомое слово "{searched_value}"'):
+            check.is_true(article.text.find(searched_value))
+        count += 1
 
 # @allure.story('Проверка главной страницы')
 # @allure.feature('Проверка меню "Настройки языка" (радио-баттоны и чекбоксы')
