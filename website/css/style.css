@@ -136,7 +136,7 @@ p {
 /* home section styles
 /* ========================================== */
 #home {
-  background: url('../images/home-bg.jpg') 50% 0 repeat-y fixed;
+  background: url('../images/pexels-fauxels-3184454.jpg') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
@@ -173,7 +173,7 @@ p {
 }
 
 #home .btn:hover {
-  background: #a5c05b;
+  background: #e7552c;
 }
 
 
@@ -290,7 +290,7 @@ p {
 #contact .form-control {
   background: transparent;
   border-color: #dddede;
-  color: #dddede;
+  color: #ffffff;
   border-radius: 0px;
   box-shadow: none;
   margin-bottom: 22px;
