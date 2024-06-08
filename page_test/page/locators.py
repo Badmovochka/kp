@@ -53,8 +53,23 @@ class MainPage(WebPage):
 
     #settings buttons, radios & checkboxes
     btn_settings = WebElement(xpath='//button[@class = "tm-footer__link"]')
-    radio_russian = WebElement(xpath='//*[@id = "uiRussian"]')
-    radio_russian_text = WebElement(xpath='//*[@class = "tm-input-radio-labeled__label"][text()="Русский"]')
+
+    radio_russian = WebElement(xpath='//label/div/input[@id="uiRussian"]')
+    radio_russian_label = WebElement(xpath='//label[div[input[@id="uiRussian"]]]')
+    radio_english = WebElement(xpath='//label/div/input[@id="uiEnglish"]')
+    radio_english_label = WebElement(xpath='//label[div[input[@id="uiEnglish"]]]')
+
+    radio_classic = WebElement(xpath='//label[text()="Classic"]/div/input')
+    radio_classic_label = WebElement(xpath='//label[text()="Classic"]')
+    radio_compact = WebElement(xpath='//label[text()="Compact"]/div/input')
+    radio_compact_label = WebElement(xpath='//label[text()="Compact"]')
+
+    radio_dark = WebElement(xpath='//label[text()="Dark"]/div/input')
+    radio_dark_label = WebElement(xpath='//label[text()="Dark"]')
+    radio_light = WebElement(xpath='//label[text()="Light"]/div/input')
+    radio_light_label = WebElement(xpath='//label[text()="Light"]')
+    radio_system = WebElement(xpath='//label[text()="System"]/div/input')
+    radio_system_label = WebElement(xpath='//label[text()="System"]')
 
     # radio_buttons = [
     #     ['uiRussian', '//*[@id="overlays"]/div/div[2]/div/div/form/div[2]/div[2]/p[1]/div/label', "Русский"],

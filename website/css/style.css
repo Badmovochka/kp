@@ -67,7 +67,7 @@ p {
 
 /* All Section styles
 ------------------------------------- */
-#testimonial, #blog, #counter, #contact {
+#example, #blog, #counter, #contact {
    	padding-top: 120px;
   	padding-bottom: 120px;
 }
@@ -177,16 +177,20 @@ p {
 }
 
 
-/* testimonial section styles
+/* example section styles
 /* ========================================== */
-#testimonial .item {
+#example h2, #example h4 {
+  text-align: center;
+}
+
+#example .item {
   text-align: center;
   display: block;
   width: 100%;
   padding-bottom: 62px;
 }
 
-#testimonial .item img {
+#example .item img {
   display: inline-block;
 }
 
