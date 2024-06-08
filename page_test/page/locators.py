@@ -78,6 +78,7 @@ class MainPage(WebPage):
     checkbox_english = WebElement(xpath='//input[@id="articlesEnglish"]')
     checkbox_english_label = WebElement(xpath='//label[@class="tm-labeled-checkbox__label" and @for="articlesEnglish"]')
 
+    #warning that appears when no checkboxes are selected
     checkbox_warning = WebElement(xpath='//p[@class="tm-fieldset__description tm-fieldset__description_invalid"]/span')
 
     #searchbox

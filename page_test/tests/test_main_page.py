@@ -8,7 +8,7 @@ import time
 @allure.story('Проверка главной страницы')
 @allure.feature('Проверка хедера')
 def test_headers(web_browser):
-    """Этот тест проверяет хедер главной страницы"""
+    """Тест проверяет хедер главной страницы"""
 
     page = MainPage(web_browser)
 
@@ -43,7 +43,7 @@ def test_headers(web_browser):
 @allure.story('Проверка главной страницы')
 @allure.feature('Проверка футера - раздел "Ваш аккаунт')
 def test_footer_account(web_browser):
-    """Этот тест проверяет раздел футера Ваш аккаунт"""
+    """Тест проверяет раздел футера Ваш аккаунт"""
 
     page = MainPage(web_browser)
 
@@ -70,7 +70,7 @@ def test_footer_account(web_browser):
 @allure.story('Проверка главной страницы')
 @allure.feature('Проверка футера - раздел "Разделы')
 def test_footer_sections(web_browser):
-    """Этот тест проверяет раздел футера Разделы"""
+    """Тест проверяет раздел футера Разделы"""
 
     page = MainPage(web_browser)
 
@@ -101,7 +101,7 @@ def test_footer_sections(web_browser):
 @allure.story('Проверка главной страницы')
 @allure.feature('Проверка футера - раздел "Информация')
 def test_footer_information(web_browser):
-    """Этот тест проверяет раздел футера Информация"""
+    """Тест проверяет раздел футера Информация"""
 
     page = MainPage(web_browser)
 
@@ -132,7 +132,7 @@ def test_footer_information(web_browser):
 @allure.story('Проверка главной страницы')
 @allure.feature('Проверка футера - раздел "Услуги')
 def test_footer_services(web_browser):
-    """Этот тест проверяет раздел футера Услуги"""
+    """Тест проверяет раздел футера Услуги"""
 
     page = MainPage(web_browser)
 
@@ -162,7 +162,7 @@ def test_footer_services(web_browser):
 @allure.story('Проверка главной страницы')
 @allure.feature('Проверка поиска')
 def test_search(web_browser):
-    """Этот тест проверяет строку поиска"""
+    """Тест проверяет строку поиска"""
 
     page = MainPage(web_browser)
 
@@ -191,7 +191,7 @@ def test_search(web_browser):
 @allure.story('Проверка главной страницы')
 @allure.feature('Проверка меню "Настройки языка" (радио-баттоны)')
 def test_settings_radios(web_browser):
-    """Этот тест проверяет радио-баттоны в настройках"""
+    """Тест проверяет радио-баттоны в настройках"""
 
     page = MainPage(web_browser)
 
@@ -231,7 +231,7 @@ def test_settings_radios(web_browser):
 @allure.story('Проверка главной страницы')
 @allure.feature('Проверка меню "Настройки языка" (чекбоксы)')
 def test_settings_checkboxes(web_browser):
-    """Этот тест проверяет чекбоксы в настройках"""
+    """Тест проверяет чекбоксы в настройках"""
 
     page = MainPage(web_browser)
 
