@@ -2,13 +2,14 @@
 
 import subprocess
 from flask import Flask, render_template
+from flask import redirect, url_for
 from requests import request
 
 
 app = Flask(__name__)
 
 @app.route("/")
-def welcome():
+def home():
     """Эта функция необходима для открытия главной страницы"""
     return render_template('index.html')
 
@@ -25,7 +26,8 @@ def trigger_ui_tests():
                           stdin=subprocess.PIPE,
                           universal_newlines=True) as result:
         out = result.communicate()
-    return render_template('index.html')
+    # return render_template('index.html/#tests')
+    return redirect(url_for('home', _anchor='tests'))
 
 @app.route("/runallure")
 def run_allure():
@@ -37,7 +39,8 @@ def run_allure():
                           stdin=subprocess.PIPE,
                           universal_newlines=True) as result:
         out = result.communicate()
-    return render_template('index.html', text=out, json=out)
+    # return render_template('index.html', text=out, json=out)
+    return redirect(url_for('home', _anchor='tests'))
 
 if __name__ == "__main__":
     app.run(debug=True)

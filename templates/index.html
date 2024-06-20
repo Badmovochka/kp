@@ -126,30 +126,33 @@
 	<!-- Tests section
 	================================================== -->
 	<section id="tests" class="paralla-section">
-		<div id="tests-popup" class="container">
-			<div>
-				<h2>Примеры тестов</h2>
-				<h3>Примеры UI-тестов написаны для сайта habr.com</h3>
-				<p>Кнопка ниже запустит тесты и выведет отчёт Allure. Тесты включают в себя проверки:</p>
-				<ul>
-					<li>хедера и футера: видимость, кликабельность элементов, текст кнопки и правильность ссылки</li>
-					<li>поисковой строки: ввод запроса в строку, переход по кнопке "поиск", проверка того, что полученные результаты отобразились, их больше одного и они действительно содержат искомое значение </li>
-					<li>радио-баттоны и чекбоксы в меню настроек: проверка видимости и кликабельности элементов, проверка, что элементы выбраны </li>
-				</ul>
-				<p>Среднее время выполнения - 2 минуты</p>
-				<div>
+		<div id="ui" class="tests-popup">
+				<div class="col-md-6 col-sm-12">
 					<div>
-					<a href="/ui_test" id="ui_tests_button" target="_self" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.6s">UI Тест</a>
+						<h2>Примеры тестов</h2>
+						<h3>Примеры UI-тестов написаны для сайта habr.com</h3>
+						<p>Кнопка "UI Тест" запустит тесты и выведет отчёт Allure. Тесты включают в себя проверки:</p>
+						<ul>
+							<li>хедера и футера: видимость, кликабельность элементов, текст кнопки и правильность ссылки</li>
+							<li>поисковой строки: ввод запроса в строку, переход по кнопке "поиск", проверка того, что полученные результаты отобразились, их больше одного и они действительно содержат искомое значение </li>
+							<li>радио-баттоны и чекбоксы в меню настроек: проверка видимости и кликабельности элементов, проверка, что элементы выбраны </li>
+						</ul>
+						<p>Среднее время выполнения - 2 минуты</p>
 					</div>
-					<div>
-					<a href="/runallure" id="run_allure_button" target="_self" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.6s">Отчёт allure</a>
-					</div>
-					<div id = "result">Some free space to see result</div>
 				</div>
+
+				<div id="ui-buttons">
+					<div>
+						<a href="/ui_test" id="ui_tests_button" onclick="Show-allure-button;" target="_self" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.6s">UI Тест</a>
+					</div>
+					<div>
+						<a href="/runallure" id="run_allure_button" target="_self" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.6s">Отчёт allure</a>
+					</div>
+				</div>
+
+
 			</div>
 
-
-		</div>
 	</section>
 
 
