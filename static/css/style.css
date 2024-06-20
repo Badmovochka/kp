@@ -1,13 +1,3 @@
-/*
-
-Template 2077 Modern Town
-
-http://www.tooplate.com/view/2077-modern-town
-
-*/
-
-/* Body 
-------------------------------------- */
 body {
 	background: #ffffff;
     font-family: 'Open Sans', sans-serif;
@@ -16,8 +6,11 @@ body {
 }
 
 html,body {
-      width: 100%;
-     overflow-x: hidden;
+    width: 100%;
+    overflow-x: hidden;
+    max-width: 1300px;
+    margin: auto;
+}
   }
 
 .post-masonry img {
@@ -176,24 +169,6 @@ p {
   background: #e7552c;
 }
 
-
-/* example section styles
-/* ========================================== */
-#tests h2, #tests h4 {
-  text-align: center;
-}
-
-#tests .item {
-  text-align: center;
-  display: block;
-  width: 100%;
-  padding-bottom: 62px;
-}
-
-#tests .item img {
-  display: inline-block;
-}
-
 /* about section styles
 /* ========================================== */
 #about .container {
@@ -223,6 +198,12 @@ p {
 	line-height: 32px;
 }
 
+@media screen and (max-width: 480px) {
+  #work-exp {
+    visibility: hidden;
+    display: none;
+  }
+}
 
 /* certificates section styles
 /* ========================================== */
@@ -265,28 +246,65 @@ p {
 }
 
 
-/* Counter section styles
+/* Tests section styles
 /* ========================================== */
-#counter {
-   background: url('../images/counter-bg.jpg') 50% 0 repeat-y fixed;
+#tests {
+  background: url('../images/tests-1.jpg') 50% 0 repeat-y fixed;
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
   text-align: center;
-  padding-top: 160px;
-  padding-bottom: 160px;
 }
 
-#counter .counter-number {
+#tests h2, #tests h4 {
+  text-align: center;
   color: #a5c05b;
-  font-size: 32px;
-}
-
-#counter .counter-text {
-  color: #dddede;
   letter-spacing: 2px;
 }
 
+#tests h3 {
+  text-align: center;
+  color: #e7552c;
+  letter-spacing: 2px;
+}
+
+#tests p {
+  color: #232122;
+}
+
+#tests .btn {
+  background: #232122;
+  border-color: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 14px 52px;
+  margin-top: 40px;
+  transition: all 0.4s ease-in-out;
+}
+
+#tests .btn:hover {
+  background: #e7552c;
+}
+
+#tests #tests-popup {
+  background: rgba(255,255,255,0.5);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#tests li {
+  text-align: left;
+}
 
 /* contact section styles
 /* ========================================== */
