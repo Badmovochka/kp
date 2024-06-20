@@ -267,7 +267,7 @@ p {
 
 #tests h2, #tests h4 {
   text-align: center;
-  color: #a5c05b;
+  color: #232122;
   letter-spacing: 2px;
 }
 
@@ -282,7 +282,7 @@ p {
 }
 
 #tests .btn {
-  background: #232122;
+  background: #a5c05b;
   border-color: transparent;
   color: #ffffff;
   font-size: 12px;
@@ -296,14 +296,31 @@ p {
   background: #e7552c;
 }
 
-#tests #tests-popup {
-  background: rgba(255,255,255,0.5);
-  padding-top: 20px;
-  padding-bottom: 20px;
+#tests .tests-popup {
+  background: rgba(255,255,255,0.7);
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%
 }
 
 #tests li {
-  text-align: left;
+  text-align: justify;
+  list-style-position: inside;
+}
+
+#ui {
+  position: relative;
+}
+
+#ui-buttons {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* contact section styles
