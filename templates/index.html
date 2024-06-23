@@ -53,7 +53,7 @@
 				<div class="col-md-12 col-sm-12">
 					<h2 class="wow fadeInDown" data-wow-delay="0.2s" style="color:#e7552c">Kristina Pershina</h2>
 					<h1 class="wow fadeInDown">QA Automation</h1>
-					<a href="#about" class="btn btn-danger wow fadeInUp" data-wow-delay="0.4s">Скачать CV</a>
+					<a href="../static/Kristina_Pershina_CV.pdf" target="_blank" class="btn btn-danger wow fadeInUp" data-wow-delay="0.4s">Скачать CV</a>
 					<a href="https://github.com/Badmovochka" target="_blank" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.6s">GitHub</a>
 				</div>
 
@@ -77,24 +77,28 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="about-des">
 						<h4>Знания и навыки</h4>
-						<h3>Я знаю и могу:</h3>
-						<p>(описать)</p>
+						<h3>Знания:</h3>
+						<p>Теория тестирования, Мануальное тестирование, Автоматизированное тестирование </p>
+						<h3>ПО и технологии:</h3>
+						<p>Test Rail, Postman, Jira, SQL, JSON, Rest API, Python, Pytest, Selenium, Allure, CSS, Linux, Bash</p>
 					</div>
 				</div>
 
 			</div>
 
 			<div class="row">
-
 				<div class="col-md-6 col-sm-12">
 					<div class="about-des">
 						<h4>Опыт работы</h4>
 						<h3>QA Specialist/Manager/Director (Logistics)</h3>
 						<h5 style="color:#232122">2018-2024 Alpha Air Agency</h5>
-						<p>(описать)</p>
+						<p>Построение и поддержание системы менеджмента качества организации согласно стандарту ISO 9001, обучение персонала, контроль выполнения требований посредством аудитов и использования контрольных точек процессов.</p>
+						<p>Поддержание письменной документации в актуальном состоянии (более 50 инструкций и несколько сотен форм).</p>
+						<p>Сертификация ISO 9001:2015 получена в 4-х офисах с первого раза, ежегодное подтверждение соответствия без замечаний или с одной формальной рекомендацией. Успешно пройденные многочисленные аудиты клиентов, проведение аудитов постащиков.</p>
 						<h3>Logistics specialist</h3>
 						<h5 style="color:#232122">2013-2018 Alpha Air Agency</h5>
-						<p>(описать)</p>
+						<p>Подготовка документов для перевозки грузов, планирование и контроль перевозки, управление связанными службами и поставщиками.</p>
+						<p>В ходе этой работы автоматизировала создание множества документов (посредстом Excel), выстроила процессы, в связи с чем получила повышение до QA специалиста.</p>
 					</div>
 				</div>
 
@@ -113,8 +117,14 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="about-des">
 						<h4>О себе</h4>
-						<h3><- Это я</h3>
-						<p>(описать)</p>
+						<h3>Кристина Першина</h3>
+						<p>Любознательна, искренне увлекаюсь тем, что делаю, внимательна к деталям, имею способности к формальной логике и хорошую память</p>
+						<h4>Хобби</h4>
+						<p>Изучение новых областей и создание чего-либо своими руками и идеями, например: проектирование и сборка мебели, варка сыра, рисование, планирование путешествий, кулинария</p>
+						<p>Люблю настольные игры!</p>
+						<p>Гидропоника комнатных растений - выращиваю дерево манго, фикусы, а в сезон также плодоносящие растения (огурцы, перец хабанеро) в гидропонной установке на солнечных батареях без использования почвы</p>
+						<p>В ходе своих увлечений и проектов увлеклась программированием (Ardiuno, Python) и поняла, что хочу развиваться в этом направлении. Так я оказалась на курсах автоматизированного тестирования, которые выбрала за обилие технологий и структурный подход.</p>
+
 					</div>
 				</div>
 
@@ -126,33 +136,39 @@
 	<!-- Tests section
 	================================================== -->
 	<section id="tests" class="paralla-section">
-		<div id="ui" class="tests-popup">
+		<div class="container">
+			<div class="row">
 				<div class="col-md-6 col-sm-12">
-					<div>
+					<div class="tests-des">
 						<h2>Примеры тестов</h2>
 						<h3>Примеры UI-тестов написаны для сайта habr.com</h3>
-						<p>Кнопка "UI Тест" запустит тесты и выведет отчёт Allure. Тесты включают в себя проверки:</p>
+						<p>Кнопка "UI Тест" запустит тесты, кнопка "Отчёт Allure" сгенерирует отчёт. Тесты включают в себя проверки:</p>
 						<ul>
 							<li>хедера и футера: видимость, кликабельность элементов, текст кнопки и правильность ссылки</li>
 							<li>поисковой строки: ввод запроса в строку, переход по кнопке "поиск", проверка того, что полученные результаты отобразились, их больше одного и они действительно содержат искомое значение </li>
 							<li>радио-баттоны и чекбоксы в меню настроек: проверка видимости и кликабельности элементов, проверка, что элементы выбраны </li>
 						</ul>
-						<p>Среднее время выполнения - 2 минуты</p>
+						<p style="text-align: center">Среднее время выполнения - 2 минуты</p>
 					</div>
-				</div>
 
-				<div id="ui-buttons">
-					<div>
+					<div class = "ui-buttons">
 						<a href="/ui_test" id="ui_tests_button" onclick="Show-allure-button;" target="_self" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.6s">UI Тест</a>
 					</div>
-					<div>
+					<div class = "ui-buttons">
 						<a href="/runallure" id="run_allure_button" target="_self" class="btn btn-default smoothScroll wow fadeInUp" data-wow-delay="0.6s">Отчёт allure</a>
 					</div>
+
 				</div>
 
+
+
+				<div class="col-md-6 col-sm-12" >
+					<img src="../static/images/tests-bg.jpg" class="img-responsive" alt="tests img">
+				</div>
 
 			</div>
 
+		</div>
 	</section>
 
 
@@ -225,7 +241,7 @@
 				<!-- Contact form section
 				================================================== -->
 				<div class="col-md-6 col-sm-6 wow fadeInDown" data-wow-delay="0.6s">
-					<form action="#" method="post">
+					<form action="https://formspree.io/f/movaadgg" method="post">
 						<div class="col-md-12 col-sm-12">
 							<input type="text" class="form-control contact-form__name" placeholder="Имя и/или название компании" name="name" id="name">
 							<div class="contact-form__error contact-form__error_name"></div>
@@ -271,8 +287,8 @@
 		<div class="row">
 
 			<div class="col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-				<h2>А тута футер</h2>
-				<p>Я не придумала пока, что сюда написать</p>
+				<h2>Kristina Pershina</h2>
+				<p>QA Automation</p>
 			</div>
 			<div class="link-list col-md-2 col-sm-2 wow fadeInUp" data-wow-delay="0.6s">
 				<h2>Навигация</h2>

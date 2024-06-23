@@ -51,18 +51,21 @@ h5 {
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.9px;
   line-height: 32px;
+  text-align: justify
 }
 
 
 
 /* All Section styles
 ------------------------------------- */
-#tests, #blog, #counter, #contact {
-   	padding-top: 120px;
-  	padding-bottom: 120px;
+#tests, #about, #counter, #contact {
+   	padding-top: 30px;
+  	padding-bottom: 30px;
+  	padding-left: 35px;
+  	padding-right: 35px;
 }
 
 #about h3 {
@@ -173,16 +176,18 @@ p {
 /* ========================================== */
 #about .container {
   	width: 100%;
-  	padding: 0px;
+  	padding-left: 35px;
+  	padding-right: 35px;
   	margin: 0px;
 }
 
 #about .col-md-6 {
-	padding: 0;
+	padding-left: 10;
+	padding-right: 10;
 }
 
 #about .about-des {
-  	padding: 65px;
+  	padding: 10px;
 }
 
 #about .about-des h3 {
@@ -194,8 +199,8 @@ p {
 }
 
 #about .about-des p {
-	font-size: 16px;
-	line-height: 32px;
+	font-size: 14px;
+	line-height: 20px;
 }
 
 @media screen and (max-width: 480px) {
@@ -204,6 +209,75 @@ p {
     display: none;
   }
 }
+
+/* Tests section styles
+/* ========================================== */
+#tests .container {
+  	width: 100%;
+  	padding: 0px;
+  	margin: 0px;
+}
+
+#tests .col-md-6 {
+	padding: 10px;
+}
+
+#tests .tests-des {
+  	padding-left: 20px;
+  	padding-right: 20px;
+}
+
+#tests .tests-des p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#tests h2, #tests h4 {
+  text-align: center;
+  color: #232122;
+  letter-spacing: 2px;
+}
+
+#tests h3 {
+  text-align: center;
+  color: #e7552c;
+  letter-spacing: 2px;
+}
+
+#tests p {
+  color: #232122;
+}
+
+#tests .ui-buttons {
+  text-align: center;
+  }
+
+
+#tests .btn {
+  background: #a5c05b;
+  border-color: transparent;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 14px 30px;
+  margin-top: 10px;
+  transition: all 0.4s ease-in-out;
+}
+
+#tests .btn:hover {
+  background: #e7552c;
+}
+
+#tests li {
+  text-align: justify;
+  list-style-position: inside;
+}
+
+#ui {
+  position: relative;
+}
+
+
 
 /* certificates section styles
 /* ========================================== */
@@ -245,83 +319,6 @@ p {
   color: #232122;
 }
 
-
-/* Tests section styles
-/* ========================================== */
-#tests {
-  background: url('../images/tests-1.jpg') 50% 0 repeat-y fixed;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100vh;
-  text-align: center;
-}
-
-#tests h2, #tests h4 {
-  text-align: center;
-  color: #232122;
-  letter-spacing: 2px;
-}
-
-#tests h3 {
-  text-align: center;
-  color: #e7552c;
-  letter-spacing: 2px;
-}
-
-#tests p {
-  color: #232122;
-}
-
-#tests .btn {
-  background: #a5c05b;
-  border-color: transparent;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: bold;
-  padding: 14px 52px;
-  margin-top: 40px;
-  transition: all 0.4s ease-in-out;
-}
-
-#tests .btn:hover {
-  background: #e7552c;
-}
-
-#tests .tests-popup {
-  background: rgba(255,255,255,0.7);
-  padding-top: 5%;
-  padding-bottom: 5%;
-  padding-left: 3%;
-  padding-right: 3%;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%
-}
-
-#tests li {
-  text-align: justify;
-  list-style-position: inside;
-}
-
-#ui {
-  position: relative;
-}
-
-#ui-buttons {
-  display: inline;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
 /* contact section styles
 /* ========================================== */
